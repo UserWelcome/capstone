@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <!-- Bootstrap CSS link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- Font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /*  custom CSS styles */
+        .cart1 {
+            border: 0.1px solid rgb(210, 184, 184);
+            text-align: center;
+            background-color: #e9dfe8;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Header-->
+    <div id="header"></div>
+    <!-- Cart page Start -->
+    <div class="container-fluid ">
+        <div class="row ">
+            <!-- Product List -->
+            <div class="col-md-8">
+                <div class="row cart1 ">
+                    <div class="card-header py-3">
+                        <h5 class="mb-0 text-center">Items in cart</h5>
+                    </div>
+                    <hr>
+                    <div class="col-md-4">
+                        <img src="images/kid6.webp" alt="Product Image" height="200" width="200">
+                    </div>
+                    <div class="col-md-4">
+                        <p>Product Name: Ethnic Dress</p>
+                        <p>Price: $10.00</p>
+                        <button class="btn btn-danger m-2"><i class="fas fa-trash"></i> Delete</button>
+                    </div>
+                    <div class="col-md-4 p-2">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-danger btn-number" data-type="minus"
+                                    data-field="quant[1]">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </span>
+                            <input type="text" name="quantity" class="form-control input-number" value="1" min="1"
+                                max="100">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-success btn-number " data-type="plus"
+                                    data-field="quant[1]">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Add more product rows here -->
+            </div>
+            <!-- Summary -->
+            <div class="col-md-4 text-black">
+                <div class="card" style=" background-color: #e9dfe8;">
+                    <div class="card-header text-center">Summary</div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <p >Cost:</p>
+                            <p >$10</p>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <p>Shipping :</p>
+                            <p>$3</p>
+                        </div>
+
+                        <hr />
+                        <div class="d-flex justify-content-between">
+                            <p>Total price:</p>
+                            <p class=" fw-bold">$13.00</p>
+                        </div>
+                        <div class="card-footer d-flex justify-content-center">
+                            <button type="submit" class="btn btn-warning "> Checkout </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer section-->
+    <div id="footer"></div>
+
+    <!--JS Code-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("header.html")
+            $("#footer").load("footer.html")
+        })
+    </script>
+    <!--BootstrapJS link-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
